@@ -1,0 +1,30 @@
+*{
+
+}
+body{
+    background-color: black;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.items{
+    padding: 20px;
+    border: 5px solid blue;
+
+}
+.header, .footer, .banner{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.aside{
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+.banner{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
