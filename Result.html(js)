@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        let sname, cg,ds,m,st,be total, avg, sstatus;
+        sname= prompt("Enter the name ");
+        h= parseInt(prompt('Enter CGMA Marks '))
+        e= parseInt(prompt('Enter DATA STRUCTURE Marks '))
+        m= parseInt(prompt('Enter Math Marks '))
+        s= parseInt(prompt('Enter Statistics Marks '))
+        c= parseInt(prompt('Enter business economics Marks '))
+        total = cg+ds+m+st+be;
+       avg=total/5;
+        sstatus = (avg>=60)?"Pass":"Fail";
+
+        document.write(`<table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th> Name </th>
+                    <th> cgma </th>
+                    <th> Data structure</th>
+                    <th> Math </th>
+                    <th> Statistics</th>
+                    <th> business economics</th>
+                    <th> Total </th>
+                    <th> Avg </th>
+                    <th> Status </th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> ${sname} </td>
+                    <td> ${cg} </td>
+                    <td> ${ds} </td>
+                    <td> ${m} </td>
+                    <td> ${st} </td>
+                    <td> ${be} </td>
+                    <td> ${total} </td>
+                    <td> ${avg} </td>
+                    <td style="color: ${avg>=60? 'green' : 'red'}"> ${sstatus} </td>
+                    
+                </tr>
+            </tbody>
+    </table>`)
+
+    </script>
+</body>
+</html>
