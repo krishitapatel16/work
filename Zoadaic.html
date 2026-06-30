@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zodiac Sign Finder</title>
+    <style>
+        body{
+            background:linear-gradient(to right,plum,blue);
+            color:black;
+            text-align:center;
+            font-family:Arial;
+            margin-top:100px;
+        }
+        h1{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🌟 Zodiac Sign Finder 🌟</h1>
+<p>Enter your birth month and day in the prompts.</p>
+
+<script>
+
+let month = prompt("Enter Birth Month:").toLowerCase();
+let day = Number(prompt("Enter Birth Day:"));
+
+if(
+    (month=="january" && day>=1 && day<=31) ||
+    (month=="february" && day>=1 && day<=29) ||
+    (month=="march" && day>=1 && day<=31) ||
+    (month=="april" && day>=1 && day<=30) ||
+    (month=="may" && day>=1 && day<=31) ||
+    (month=="june" && day>=1 && day<=30) ||
+    (month=="july" && day>=1 && day<=31) ||
+    (month=="august" && day>=1 && day<=31) ||
+    (month=="september" && day>=1 && day<=30) ||
+    (month=="october" && day>=1 && day<=31) ||
+    (month=="november" && day>=1 && day<=30) ||
+    (month=="december" && day>=1 && day<=31)
+)
+{
+    let zodiac;
+
+    if((month=="march" && day>=21) || (month=="april" && day<=19))
+        zodiac="♈ Aries";
+    else if((month=="april" && day>=20) || (month=="may" && day<=20))
+        zodiac="♉ Taurus";
+    else if((month=="may" && day>=21) || (month=="june" && day<=20))
+        zodiac="♊ Gemini";
+    else if((month=="june" && day>=21) || (month=="july" && day<=22))
+        zodiac="♋ Cancer";
+    else if((month=="july" && day>=23) || (month=="august" && day<=22))
+        zodiac="♌ Leo";
+    else if((month=="august" && day>=23) || (month=="september" && day<=22))
+        zodiac="♍ Virgo";
+    else if((month=="september" && day>=23) || (month=="october" && day<=22))
+        zodiac="♎ Libra";
+    else if((month=="october" && day>=23) || (month=="november" && day<=21))
+        zodiac="♏ Scorpio";
+    else if((month=="november" && day>=22) || (month=="december" && day<=21))
+        zodiac="♐ Sagittarius";
+    else if((month=="december" && day>=22) || (month=="january" && day<=19))
+        zodiac="♑ Capricorn";
+    else if((month=="january" && day>=20) || (month=="february" && day<=18))
+        zodiac="♒ Aquarius";
+    else
+        zodiac="♓ Pisces";
+
+    alert("Your Zodiac Sign is: " + zodiac);
+}
+else
+{
+    alert("❌ Invalid Month or Day!");
+}
+
+</script>
+
+</body>
+</html>
