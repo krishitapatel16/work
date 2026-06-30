@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Login (DOM)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: plum;
+        }
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: blue;
+            border-radius: 8px;
+            box-shadow: 0 0 10px green;
+            text-align: center;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            width: 95%;
+            padding: 10px;
+            background:black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        h2 {
+            color: rosybrown;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Create container
+    let container = document.createElement("div");
+    container.className = "container";
+
+    // Heading
+    let heading = document.createElement("h2");
+    heading.innerText = "Facebook";
+
+    // Email input
+    let email = document.createElement("input");
+    email.type = "text";
+    email.placeholder = "Email or Phone";
+
+    // Password input
+    let password = document.createElement("input");
+    password.type = "password";
+    password.placeholder = "Password";
+
+    // Login button
+    let button = document.createElement("button");
+    button.innerText = "Log In";
+
+    // Button event
+    button.onclick = function () {
+        if (email.value === "" || password.value === "") {
+            alert("Please fill all fields.");
+        } else {
+            alert("Login Successful!");
+        }
+    };
+
+    // Append elements
+    container.appendChild(heading);
+    container.appendChild(email);
+    container.appendChild(password);
+    container.appendChild(button);
+
+    document.body.appendChild(container);
+</script>
+
+</body>
+</html>
